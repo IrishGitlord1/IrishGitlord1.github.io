@@ -17,9 +17,10 @@ function checkCookie() {
 	var darkmode = getCookie("darkmode");
 	if (darkmode == "true") {
 		$("#darkmode").prop("checked", true);
-		$("#top").css("background-color", "#2e2e2e");
-	} else if () {
-		$("#top").css("background-color", "#ffffff");   
+		$("#top").css("background-color", "#ffffff");
+	} else if (darkmode == "false") {
+		$("#darkmode").prop("checked", false);
+		$("#top").css("background-color", "#2e2e2e");   
 	}
 }
 	
