@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>Settings</title>
+			<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+			<meta charset="utf-8"/>
+			<link rel="stylesheet" type="text/css" href="main.css">
+		</head>
+		<body id="top" onload="checkCookie()">
+			<header>
+				<nav role="navigation" >
+					<!-- <img id="logo" src="kplogo.png" alt="Kem Pal Logo" align="right"> -->
+					<svg id="logo" height="67" width="67" fill="#ededed">
+ 						<text x="-31.5" y="41" transform="scale(-1,1)">K</text>
+	 					<text x="18.5" y="41">P</text>
+					</svg>
+				  <div id="menuToggle">
+				    <input type="checkbox" />
+				    <span></span>
+				    <span></span>
+				    <span></span>
+				    <ul id="menu">
+				      <a href="kempal.html"><li>Home</li></a>
+				      <a href="#"><li>Settings</li></a>
+				      <a href="#"><li>About</li></a>
+				    </ul>
+				  </div>
+				</nav>
+			</header>
+			<section id="main">
+				<div>
+					<label class="switch">
+					  <input type="checkbox" id="darkmode">
+					  <span class="slider" onclick="setDarkmode()"></span>
+					</label>
+				</div>
+				<div id="text-speach">
+					<label class="switch">
+					  <input type="checkbox">
+					  <span class="slider"></span>
+					</label>
+				</div>
+				<div id="font-size">
+					<label class="switch">
+					  <input type="checkbox">
+					  <span class="slider"></span>
+					</label>
+				</div>
+			</section>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+			<script src="siteJS.js"></script>
+		</body>
+	</html>
