@@ -13,7 +13,7 @@ function getCookie(cname) {
 	return "false";
 }
 
-	function checkCookie() {
+function checkCookie() {
 	var darkmode = getCookie("darkmode");
 	if (darkmode == "true") {
 		$("#darkmode").prop("checked", true);
