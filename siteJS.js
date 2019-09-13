@@ -25,5 +25,8 @@ function setDarkmode() {
 	if (document.getElementById("darkmode").checked == true) {
 		document.cookie = "darkmode=true; expires=Wed, 1 Jan 2030 00:00:00 UTC;";
 		checkCookie();
+	} else if (document.getElementById("darkmode").checked == false) {
+		document.cookie = "darkmode=true; expires=Wed, 1 Jan 2030 00:00:00 UTC;";
+		checkCookie();
 	}
 }
