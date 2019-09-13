@@ -19,7 +19,6 @@ function checkCookie() {
 		$("#darkmode").prop("checked", true);
 		$("#top").css("background-color", "#2e2e2e");
 	} else if () {
-		$("#darkmode").prop("checked", false);
 		$("#top").css("background-color", "#ffffff");   
 	}
 }
