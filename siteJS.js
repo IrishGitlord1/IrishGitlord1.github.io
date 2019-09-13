@@ -17,7 +17,10 @@ function checkCookie() {
 	var darkmode = getCookie("darkmode");
 	if (darkmode == "true") {
 		$("#darkmode").prop("checked", true);
-		$("#top").css("background-color", "red");
+		$("#top").css("background-color", "#2e2e2e");
+	} else if () {
+		$("#darkmode").prop("checked", false);
+		$("#top").css("background-color", "#ffffff");   
 	}
 }
 	
@@ -26,7 +29,7 @@ function setDarkmode() {
 		document.cookie = "darkmode=true; expires=Wed, 1 Jan 2030 00:00:00 UTC;";
 		checkCookie();
 	} else if (document.getElementById("darkmode").checked == false) {
-		document.cookie = "darkmode=true; expires=Wed, 1 Jan 2030 00:00:00 UTC;";
+		document.cookie = "darkmode=false; expires=Wed, 1 Jan 2030 00:00:00 UTC;";
 		checkCookie();
 	}
 }
