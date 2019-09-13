@@ -22,7 +22,7 @@ function checkCookie() {
 }
 	
 function setDarkmode() {
-	if ($("#darkmode").checked) {
+	if ($("#darkmode").is(":checked")) {
 		document.cookie = "darkmode=true; expires=Wed, 1 Jan 2030 00:00:00 UTC;";
 		checkCookie();
 	}
