@@ -50,7 +50,7 @@ function loadJSON(callback) {
 
 function cardifyElements() {
 	loadJSON(function(elements) {
-		var elementsJSON = JSON.parse(elementsJSON);
+		var elementsJSON = JSON.parse(elements);
 		console.log(elements);
 	 });
 }
