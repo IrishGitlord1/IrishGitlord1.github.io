@@ -16,10 +16,10 @@ function getCookie(cname) {
 function checkCookie() {
 	var darkmode = getCookie("darkmode");
 	if (darkmode == "true") {
-		$("#darkmode").prop("checked", false);
+		$("#darkmode").prop("checked", true);
 		$("#top").css("background-color", "#ffffff");
 	} else if (darkmode == "false") {
-		$("#darkmode").prop("checked", true);
+		$("#darkmode").prop("checked", false);
 		$("#top").css("background-color", "#2e2e2e");   
 	}
 }
@@ -27,9 +27,30 @@ function checkCookie() {
 function setDarkmode() {
 	if (document.getElementById("darkmode").checked == true) {
 		document.cookie = "darkmode=true; expires=Wed, 1 Jan 2030 00:00:00 UTC;";
-		$("#top").css("background-color", "#ffffff");
+		checkCookie();
 	} else if (document.getElementById("darkmode").checked == false) {
 		document.cookie = "darkmode=false; expires=Wed, 1 Jan 2030 00:00:00 UTC;";
-		$("#top").css("background-color", "#2e2e2e");
+		checkCookie();
 	}
+}
+
+function loadJSON(callback) {   
+
+    var xobj = new XMLHttpRequest();
+        xobj.overrideMimeType("application/json");
+    xobj.open('GET', 'elements.json', true);
+    xobj.onreadystatechange = function () {
+          if (xobj.readyState == 4 && xobj.status == "200") {
+            callback(xobj.responseText);
+          }
+    };
+    xobj.send(null);  
+ }
+ 
+
+function cardifyElements() {
+	loadJSON(function(elements) {
+		var elementsJSON = JSON.parse(elementsJSON);
+		console.log(elements);
+	 });
 }
