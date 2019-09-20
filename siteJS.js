@@ -1,3 +1,5 @@
+import { elementsJSON } from "pt";
+
 function getCookie(cname) {
 	var name = cname + "=";
 	var ca = document.cookie.split(';');
@@ -34,23 +36,7 @@ function setDarkmode() {
 	}
 }
 
-function loadJSON(callback) {   
-
-    var xobj = new XMLHttpRequest();
-        xobj.overrideMimeType("application/json");
-    xobj.open('GET', 'elements.json', true);
-    xobj.onreadystatechange = function () {
-          if (xobj.readyState == 4 && xobj.status == "200") {
-            callback(xobj.responseText);
-          }
-    };
-    xobj.send(null);  
- }
- 
-
 function cardifyElements() {
-	loadJSON(function(elements) {
-		var elementsJSON = JSON.parse(elements);
-		console.log(elements);
-	 });
+	var elements = JSON.parse(elementsJSON);
+	console.log(elements.elements[0].name + " " + elements.elements[0].symbol);
 }
