@@ -1,4 +1,4 @@
-import { elementsJSON } from "pt";
+import { elementsJSON } from "./pt";
 
 function getCookie(cname) {
 	var name = cname + "=";
