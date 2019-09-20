@@ -6,7 +6,7 @@
 			<meta charset="utf-8"/>
 			<link rel="stylesheet" type="text/css" href="main.css">
 		</head>
-		<body id="top" onload="checkCookie()">
+		<body id="top" onload="checkCookie(), buildHtmlTable('#elementsDataTable')">
 			<header>
 				<nav role="navigation">
 					<svg id="logo" height="67" width="67" fill="#ededed">
@@ -27,14 +27,11 @@
 				</nav>
 			</header>
 			<section id="main">
-				<div id="elementCard">
-					
-				</div>
+				<table id="elementsDataTable" border="1">
+  				</table>
 			</section>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/json2html/1.2.0/json2html.min.js"></script>
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-			<script type="module" src="siteJS.js"></script>
-			<script src="elements.js"></script>
+			<script src="siteJS.js"></script>
 			</script>
 		</body>
 	</html>
