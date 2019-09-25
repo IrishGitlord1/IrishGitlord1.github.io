@@ -206,11 +206,11 @@ function currentSlide(n) {
 
 function showSlides(n) {
   var i;
-  var slides = document.getElementsByIName('mySlides');
+  var slides = document.getElementsByID('elementCard');
   if (n > elements.length) {slideIndex = 1}
   if (n < 1) {slideIndex = elements.length}
   for (i = 0; i < elements.length; i++) {
-      $('#').prepend(elements[i]);
+      $('#elementCard').prepend(elements[i]);
   }
   elements[slideIndex-1].style.display = 'block';
 }
