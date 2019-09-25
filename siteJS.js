@@ -9,7 +9,7 @@ var elements = [
  	{ "number": "8", "name": "Oxygen", "symbol": "O", "weight": "15.999", "density": "1.43", "discovery": "1774"}, 
  	{ "number": "9", "name": "Fluorine", "symbol": "F", "weight": "18.998", "density": "1.7", "discovery": "1886"}, 
  	{ "number": "10", "name": "Neon", "symbol": "Ne", "weight": "20.18", "density": "0.9", "discovery": "1898"}, 
- 	{ "number": "11", "name": "Sodium", "symbol": "Na", "weight": "22.99", "density": "0.97", "discovery": "1807"}, 
+	{ "number": "11", "name": "Sodium", "symbol": "Na", "weight": "22.99", "density": "0.97", "discovery": "1807"}, 
  	{ "number": "12", "name": "Magnesium", "symbol": "Mg", "weight": "24.305", "density": "1.74", "discovery": "1755"}, 
  	{ "number": "13", "name": "Aluminum", "symbol": "Al", "weight": "26.982", "density": "2.7", "discovery": "1825"}, 
  	{ "number": "14", "name": "Silicon", "symbol": "Si", "weight": "28.086", "density": "2.33", "discovery": "1824"}, 
@@ -137,10 +137,10 @@ function getCookie(cname) {
 function checkCookie() {
 	var darkmode = getCookie("darkmode");
 	if (darkmode == "true") {
-		$("#darkmode").prop("checked", false);
+		$("#darkmode").prop("checked", true);
 		$("#top").css("background-color", "#ffffff");
 	} else if (darkmode == "false") {
-		$("#darkmode").prop("checked", true);
+		$("#darkmode").prop("checked", false);
 		$("#top").css("background-color", "#2e2e2e");   
 	}
 }
@@ -155,14 +155,7 @@ function setDarkmode() {
 	}
 }
 
-/*function cardifyElements() {
-	var elements = JSON.parse(elementsJSON);
-	for (i = 0; i < 118; i++) {
-		console.log(elements.elements[i].number + " " +elements.elements[i].name + " " + elements.elements[i].symbol + " " + elements.elements[i].weight + " " + elements.elements[i].density + " " + elements.elements[i].discovery);
-	}
-	
-}*/
-
+/*
 function buildHtmlTable(selector) {
   var columns = addAllColumnHeaders(elements, selector);
 
@@ -196,5 +189,28 @@ function addAllColumnHeaders(elements, selector) {
   $(selector).append(headerTr$);
 
   return columnSet;
+} */
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
 }
 
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByIName('mySlides');
+  if (n > elements.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = elements.length}
+  for (i = 0; i < elements.length; i++) {
+      $('#').prepend(elements[i]);
+  }
+  elements[slideIndex-1].style.display = 'block';
+}
