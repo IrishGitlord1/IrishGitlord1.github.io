@@ -191,6 +191,40 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
+.button_1 {
+  background-color: #99d8ea;
+  height:calc(100vw - 70vw);
+  width: calc(100vw - 37.5vw);
+  border: 2.5px solid black;
+  margin: 0 auto;
+  margin-top: 15% !important;
+  }
+
+.button_1 p {
+  text-align:center;
+  color: Black;
+  font-size: calc(100vw - 92.5vw);
+  text-decoration: none;
+  position: relative;
+  margin-top: 5%;
+  font-family: 'Open Sans', sans-serif;
+  }
+
+  a:link{
+    text-decoration: none;
+  }
+
+  a:visited{
+    text-decoration: none;
+  }
+
+  a:hover{
+    text-decoration: none;
+  }
+
+  a:active{
+    text-decoration: none;
+  }
 
 footer {
   position: relative;
