@@ -124,7 +124,7 @@ function getCookie(cname) {
 	var ca = document.cookie.split(';');
 	for(var i = 0; i < ca.length; i++) {
 		var c = ca[i];
-		while (c.charAt(0) == '') {
+		while (c.charAt(0) == ' ') {
 		  c = c.substring(1);
 	}
 	if (c.indexOf(name) == 0) {
@@ -137,80 +137,35 @@ function getCookie(cname) {
 function checkCookie() {
 	var darkmode = getCookie("darkmode");
 	if (darkmode == "true") {
-		$("#darkmode").prop("checked", false);
-		$("#top").css("background-color", "#ffffff");
-	} else if (darkmode == "false") {
 		$("#darkmode").prop("checked", true);
-		$("#top").css("background-color", "#2e2e2e");   
+		$("#top").css("background-color", "#2e2e2e");
+	} else if (darkmode == "false") {
+		$("#darkmode").prop("checked", false);
+		$("#top").css("background-color", "#ffffff");   
 	}
 }
 	
 function setDarkmode() {
 	if (document.getElementById("darkmode").checked == true) {
 		document.cookie = "darkmode=true; expires=Wed, 1 Jan 2030 00:00:00 UTC;";
-		checkCookie();
+		$("#top").css("background-color", "#ffffff");
 	} else if (document.getElementById("darkmode").checked == false) {
 		document.cookie = "darkmode=false; expires=Wed, 1 Jan 2030 00:00:00 UTC;";
-		checkCookie();
-	}
+		$("#top").css("background-color", "#2e2e2e");
+		}
 }
-
-/*
-function buildHtmlTable(selector) {
-  var columns = addAllColumnHeaders(elements, selector);
-
-  for (var i = 0; i < elements.length; i++) {
-    var row$ = $('<tr/>');
-    for (var colIndex = 0; colIndex < columns.length; colIndex++) {
-      var cellValue = elements[i][columns[colIndex]];
-      if (cellValue == null) cellValue = "";
-      row$.append($('<td/>').html(cellValue));
-    }
-    $(selector).append(row$);
-  }
-}
-
-// Adds a header row to the table and returns the set of columns.
-// Need to do union of keys from all records as some records may not contain
-// all records.
-function addAllColumnHeaders(elements, selector) {
-  var columnSet = [];
-  var headerTr$ = $('<tr/>');
-
-  for (var i = 0; i < elements.length; i++) {
-    var rowHash = elements[i];
-    for (var key in rowHash) {
-      if ($.inArray(key, columnSet) == -1) {
-        columnSet.push(key);
-        headerTr$.append($('<th/>').html(key));
-      }
-    }
-  }
-  $(selector).append(headerTr$);
-
-  return columnSet;
-} */
 
 var slideIndex = 1;
 showSlides(slideIndex);
 
-// Next/previous controls
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
 
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
 function showSlides(n) {
-  var i;
-  var slides = document.getElementById('elementCard');
-  if (n > elements.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = elements.length}
-  for (i = 0; i < elements.length; i++) {
-      $('#elementCard').prepend(elements[i]);
-  }
-  elements[slideIndex-1].style.display = 'block';
+	var i;
+	if (n > elements.length) {slideIndex = 1}
+	if (n < 1) {slideIndex = elements.length}
+	document.getElementById('elementCard').innerHTML = elements[slideIndex-1].name;
+	return true;
 }
