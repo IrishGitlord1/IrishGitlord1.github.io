@@ -198,7 +198,7 @@ input:checked + .slider:before {
   border: 2.5px solid black;
   margin: 0 auto;
   margin-top: 15% !important;
-  }
+}
 
 .button_1 p {
   text-align:center;
@@ -208,22 +208,68 @@ input:checked + .slider:before {
   position: relative;
   margin-top: 5%;
   font-family: 'Open Sans', sans-serif;
+}
+
+a:link{
+    text-decoration: none;
+}
+
+a:visited{
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+a:active{
+  text-decoration: none;
+}
+
+#elementCard {
+  height: 100vw;
+  width: calc(100vw - 30vw);
+  border: 2.5px solid black;
+  margin: 0 auto;
+  margin-top: 12% !important;
+  position: relative;
+}
+
+#elementSymbol {
+  text-align: center;
+  font-size: 1000%;
+  font-family: 'Open Sans', sans-serif;
+  border: 2.5px solid black;
+  border-left: none;
+  border-right: none;
+  padding: 4%;
+}
+
+#elementNumber {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 100px 100px;
+  border-color: transparent transparent #99d8ea transparent;
   }
 
-  a:link{
-    text-decoration: none;
+#elementNumberText {
+  margin-left: -70px;
+  margin-top: 55px;
+  font-size: 200%;
   }
 
-  a:visited{
-    text-decoration: none;
+#moveSlide {
+  margin-top: 12%;
+  text-align: center;
+  font-size: 300%;
   }
 
-  a:hover{
-    text-decoration: none;
-  }
-
-  a:active{
-    text-decoration: none;
+#moveSlide .next {
+  margin-left: 28%;
   }
 
 footer {
