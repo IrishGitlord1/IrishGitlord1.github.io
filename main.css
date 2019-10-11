@@ -190,7 +190,7 @@ a:active{
   border: 2.5px solid black;
   border-left: none;
   border-right: none;
-  padding: 4%;
+  padding: 3%;
 }
 
 #elementNumber {
@@ -206,7 +206,7 @@ a:active{
 
 #elementNumberText {
   margin-left: calc(100vw - 117vw);
-  margin-top: calc(100vw - 86vw);
+  margin-top: calc(100vw - 87vw);
   font-size: 200%;
   }
 
