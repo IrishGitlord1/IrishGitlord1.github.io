@@ -92,7 +92,7 @@ a:hover {
   margin: -100px 0 0 -50px;
   padding: 50px;
   padding-top: 125px;
-  padding-bottom: 112%;
+  padding-bottom: 100%;
   padding-right: calc(100vw - 100px);
   background: #ededed;
   list-style-type: none;
@@ -250,7 +250,7 @@ footer {
   height: 100%;
   width: 100%;/*these pecentages were nessisary because*/
   font-family: 'Open Sans', sans-serif;
-  font-size: 90%;
+  font-size: 80%;
 }
 
 /*drop down box*/
