@@ -290,3 +290,42 @@ function autocomplete(inp, arr) {
 }
 
 autocomplete(document.getElementById("myInput"), elements);
+
+function elementCalc() {
+    var elm1 = document.getElementById('element1');
+    var elm2 = document.getElementById('element2');
+
+    elm1.onkeyup = function(event){
+    	var recherche = event.target.value;
+
+    	for(var i in elements) {
+    	    if(elements[i] == recherche) {
+    	    	var wikiEnd = elm1 + elm2
+				if (wikiEnd !== "") {
+					var wikiLink = "https://en.wikipedia.org/wiki/" + wikiEnd;
+					document.getElementById('result').src = wikiLink;
+    	    	}
+    		}
+
+        }
+    };
+
+    elm2.onkeyup = function(event){
+    	var recherche = event.target.value;
+
+    	for(var i in elements) {
+    	    if(elements[i] == recherche) {
+    	    	var wikiEnd = elm1 + elm2
+				if (wikiEnd !== "") {
+					var wikiLink = "https://en.wikipedia.org/wiki/" + wikiEnd;
+					document.getElementById('result').src = wikiLink;
+    	    	}
+    		}
+
+        }
+    };
+}
+
+function elementWiki(wikiLink) {
+	document.getElementById('result').src = wikiLink;
+}

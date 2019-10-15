@@ -239,18 +239,16 @@ footer {
 
 /*search input form*/
 #myInput {
-  background-image: url("spyglass.jpg"); /* Add a search icon to input */
   background-position: 10px 12px; /* Position the search icon */
   background-repeat: no-repeat
   background-size: 10px 12px;
   padding: 5%;
-  font-size: 100%;
   border: 2px solid black;
   text-decoration: none;
   height: 100%;
   width: 100%;/*these pecentages were nessisary because*/
   font-family: 'Open Sans', sans-serif;
-  font-size: 80%;
+  font-size: 100%;
 }
 
 /*drop down box*/
@@ -299,4 +297,17 @@ footer a {
   text-align: left;
   text-decoration: none;
   color: #EAEAEA;
+}
+
+#chemSearch {
+  font-family: 'Open Sans', sans-serif;
+}
+
+#element1, #element2, #result {
+  width: 100%;
+}
+
+#element1, #element2 {
+  padding: 4%;
+  font-size: 100%;
 }
