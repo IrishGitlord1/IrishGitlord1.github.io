@@ -28,12 +28,14 @@
 			</header>
 			<section id="main">
 				<div id="chemSearch">
-					First Element: <input type="text" id="element1" placeholder="Type in an Element symbol" />
+					First Element: <input type="text" id="element1" placeholder="Type in an Element symbol (Case Sensitive)" />
 					<br/>
-					Second Element: <input type="text" id="element2" placeholder="Type in an Element symbol" />
-					<iframe id="result" src=""></iframe>
+					Second Element: <input type="text" id="element2" placeholder="Type in an Element symbol (Case Sensitive)" />
 					<br/>
-					<button onclick="elementCalc()">Try it</button>
+					Third Element: <input type="text" id="element3" placeholder="Type in an Element symbol (Optional)" />
+					<button onclick="elementCalc()" style="margin: 5%;" >Try it</button>
+					<iframe id="result" src="" style="height: 500px; width: 100vw;"></iframe>
+					<br/>
 				</div>
 			</section>
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

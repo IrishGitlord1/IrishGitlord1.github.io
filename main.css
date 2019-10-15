@@ -303,11 +303,11 @@ footer a {
   font-family: 'Open Sans', sans-serif;
 }
 
-#element1, #element2, #result {
+#element1, #element2, #element3, #result {
   width: 100%;
 }
 
-#element1, #element2 {
+#element1, #element2, #element3 {
   padding: 4%;
   font-size: 100%;
 }

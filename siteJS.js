@@ -292,38 +292,36 @@ function autocomplete(inp, arr) {
 autocomplete(document.getElementById("myInput"), elements);
 
 function elementCalc() {
-    var elm1 = document.getElementById('element1');
-    var elm2 = document.getElementById('element2');
+    var elm1 = document.getElementById('element1').value;
+    var elm2 = document.getElementById('element2').value;
+    var elm3 = document.getElementById('element3').value;
 
-    elm1.onkeyup = function(event){
-    	var recherche = event.target.value;
+	var elm1Sym = elm1.replace(/[0-9]/g, '');
+	var elm2Sym = elm2.replace(/[0-9]/g, '');
+	var elm3Sym = elm3.replace(/[0-9]/g, '');
+	
+    for(var i in elements) {
+    	if(elements[i].symbol == elm1Sym) {
+			var elm1IsElm = true;
+		}
+		
+		if(elements[i].symbol == elm2Sym) {
+			var elm2IsElm = true;
+		}
 
-    	for(var i in elements) {
-    	    if(elements[i] == recherche) {
-    	    	var wikiEnd = elm1 + elm2
-				if (wikiEnd !== "") {
-					var wikiLink = "https://en.wikipedia.org/wiki/" + wikiEnd;
-					document.getElementById('result').src = wikiLink;
-    	    	}
-    		}
+		if(elements[i].symbol == elm3Sym || elm3Sym == "") {
+			var elm3IsElm = true;
+		}
+		
+		if(elm1IsElm && elm2IsElm && elm3IsElm) {
+			var wikiEnd = elm1 + elm2 + elm3
+			if (wikiEnd !== "") {
+				var wikiLink = "https://en.wikipedia.org/wiki/" + wikiEnd;
+				document.getElementById('result').src = wikiLink;
+			}
+		}
 
-        }
-    };
-
-    elm2.onkeyup = function(event){
-    	var recherche = event.target.value;
-
-    	for(var i in elements) {
-    	    if(elements[i] == recherche) {
-    	    	var wikiEnd = elm1 + elm2
-				if (wikiEnd !== "") {
-					var wikiLink = "https://en.wikipedia.org/wiki/" + wikiEnd;
-					document.getElementById('result').src = wikiLink;
-    	    	}
-    		}
-
-        }
-    };
+    }
 }
 
 function elementWiki(wikiLink) {
