@@ -149,34 +149,34 @@ function showSlides(n) {
 
   switch (elements[slideIndex-1].groups) {
     case "Alkali Metals":
-      document.getElementById('elementSymbol').style.backgroundColor = "#FFB600";
+      document.getElementById('elementSymbol').style.backgroundColor = "#FF6661";
       break;
     case "Alkaline Earth Metals":
-      document.getElementById('elementSymbol').style.backgroundColor = "#F3FF00";
+      document.getElementById('elementSymbol').style.backgroundColor = "#FFDCAC";
       break;
     case "Lanthanoids":
-      document.getElementById('elementSymbol').style.backgroundColor = "#FF928E";
+      document.getElementById('elementSymbol').style.backgroundColor = "#E3B3E1";
       break;
     case "Actinoids":
-      document.getElementById('elementSymbol').style.backgroundColor = "#E68EC3";
+      document.getElementById('elementSymbol').style.backgroundColor = "#F89CCB";
       break;
     case "Transition Metals":
-      document.getElementById('elementSymbol').style.backgroundColor = "#BF9197";
+      document.getElementById('elementSymbol').style.backgroundColor = "#FFC4C4";
       break;
     case "Post-Transition Metals":
-      document.getElementById('elementSymbol').style.backgroundColor = "#55C2A7";
+      document.getElementById('elementSymbol').style.backgroundColor = "#CFCFD1";
       break;
     case "Metalloids":
-      document.getElementById('elementSymbol').style.backgroundColor = "#1DB835";
+      document.getElementById('elementSymbol').style.backgroundColor = "#CBCD9B";
       break;
     case "Other nonmetals":
-      document.getElementById('elementSymbol').style.backgroundColor = "#54CC8B";
+      document.getElementById('elementSymbol').style.backgroundColor = "#9FFDAA";
       break;
     case "Noble Gases":
-      document.getElementById('elementSymbol').style.backgroundColor = "#17BCC2";
+      document.getElementById('elementSymbol').style.backgroundColor = "#B9FAF8";
       break;
     case "Unknown":
-      document.getElementById('elementSymbol').style.backgroundColor = "#8A8179";
+      document.getElementById('elementSymbol').style.backgroundColor = "#F1EFF2";
       break;
   }
 }
